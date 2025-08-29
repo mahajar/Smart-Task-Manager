@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Smart Task Manager</title>
+<style>
+  body { font-family: Arial, sans-serif; max-width: 600px; margin: auto; padding: 20px; }
+  input, select, button { margin: 5px 0; padding: 8px; width: 100%; max-width: 300px; }
+  ul { list-style-type: none; padding: 0; }
+  li { margin-bottom: 10px; border-bottom: 1px solid #ccc; padding-bottom: 5px; }
+  .completed { text-decoration: line-through; color: gray; }
+</style>
+</head>
+<body>
+
+<h1>Smart Task Manager</h1>
+
+<div>
+  <input type="text" id="title" placeholder="Titre de la tâche" />
+  <select id="importance">
+    <option value="1">Importance 1</option>
+    <option value="2">Importance 2</option>
+    <option value="3" selected>Importance 3</option>
+    <option value="4">Importance 4</option>
+    <option value="5">Importance 5</option>
+  </select>
+  <input type="date" id="due_date" />
+  <button onclick="addTask()">Ajouter la tâche</button>
+</div>
+
+<h2>Liste des tâches</h2>
+<ul id="taskList"></ul>
+
+<script src="script.js"></script>
+
+</body>
+</html>
